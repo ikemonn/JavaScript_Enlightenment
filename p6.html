@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+//Object()コンストラクタを使ってcodeAを生成
+
+var codyA = new Object();
+codyA.living = true;
+codyA.age = 33;
+codyA.gender = 'male';
+codyA.getGender = function () {
+	return codyA.gender;
+}
+
+console.log(codyA);
+
+//こちらの方法でオブジェクトを作ると使い回しができる
+var Person = function(living, age, gender) {
+	this.living = living;
+	this.age = age;
+	this.gender = gender;
+	this.getGender = function (){
+		return this.gender;
+	}
+}
+
+var codyB = new Person(true, 33, 'male');
+var ikemoto = new Person(false, 23, 'male');
+
+console.log(codyB);
+console.log(ikemoto.getGender());
+
+</script>
+</html>
