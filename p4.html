@@ -22,5 +22,21 @@ var myString = new String('foo');
 console.log(myString);
 
 
+//Integer()オブジェクトを生成
+var myInt = new Number(3);
+console.log(myInt);
+
+//p5
+//後でPersonオブジェクトを生成するために、Personコンスタントラクタ関数を定義
+var Person = function(living, age, gender) {
+	this.living = living;
+	this.age = age;
+	this.gender = gender;
+	this.getGender = function() { return this.gender; };
+}
+
+var cody = new Person(true, 33, 'male');
+console.log(cody);
+
 </script>
 </html>
