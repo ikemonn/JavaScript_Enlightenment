@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+var myString = 'foo';
+var myStringCopy = myString;
+myString = 'hoge';
+
+console.log(myString, myStringCopy);
+
+var price1 = 10;
+var price2 = 10;
+console.log(price1 === price2);
+
+var price3 = new Number(10);
+var price4 = price3;
+
+var price5 = new Number(10);
+price5 = 10;
+console.log(price1 === price3);
+
+//オブジェクトは参照によって比較されるため、false
+console.log(price4 === price5);
+console.log(price4 == price5);
+
+</script>
+</html>
