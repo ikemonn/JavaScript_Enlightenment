@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+var myObject = {
+	myString: 'hoge',
+	myNumber:10
+}
+
+var myObject2 = myObject;
+
+myObject.myString = 'huga';
+console.log(myObject, myObject2);
+
+var objectFoo = {same: 'same'};
+var objectBar = {same: 'same'};
+//false
+console.log(objectBar === objectFoo);
+
+
+
+</script>
+</html>
