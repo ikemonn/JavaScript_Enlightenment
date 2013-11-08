@@ -11,8 +11,27 @@
 var myNumber = new Number(23);
 var myNumberLiteral = 23;
 
-console.log(myNumber, myNumberLiteral);
+console.log(myNumberLiteral);
 
+
+//数値、文字列、真偽値もオブジェクトのように使われると、
+//JSがバックグランドでプリミティブ値をオブジェクトとして補完する
+//ラッパーオブジェクトを生成する。
+//目的のメソッドが実行された後はラッパーオブジェクトを破棄して値はプリミティブ型に戻る
+var hoge = new String();
+hoge.word = 'hoge'
+hoge.myMethod = function() {alert(this.word)};
+hoge.myMethod();
+
+
+var myObject = {
+	myString: 'string',
+	myNumber: 10,
+	myBoolean: false,
+	myNull: null,
+	myUndefined: undefined
+}
+console.log(myObject);
 
 
 </script>
