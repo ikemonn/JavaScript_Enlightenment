@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+var myObject = {};
+
+//myObjectの内部にプロパティを追加
+
+myObject.myFunction = function(){alert('func!')};
+myObject.myArray = [];
+myObject.myString = 'string';
+myObject.myNumber = 6;
+myObject.myDate = new Date();
+myObject.myRegExp = /a/;
+myObject.myNull = null;
+myObject.myUndefined = undefined;
+myObject.myMath_PI = Math.PI;
+myObject.myError = new Error('error');
+console.log(myObject.myFunction,myObject.myArray,myObject.myString,myObject.myNumber,myObject.myDate,myObject.myRegExp,myObject.myNull,myObject.myUndefined,myObject.myMath_PI,myObject.myError);
+
+var myString = new String();
+myString.myFunction = function(){alert('fuga')};
+myString.myFunction();
+
+</script>
+</html>

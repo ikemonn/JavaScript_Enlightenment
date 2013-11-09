@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+var foobarObject = { foobar: 'foobar'};
+var string1 = 'foo';
+var string2 = 'bar';
+
+console.log(foobarObject[string1 + string2]);
+
+var myObject = {'123':'zero', 'class':'foo'};
+//数値で始まるプロパティ名は不正、'class'は予約語のためブラケット記法のみでアクセス可能
+console.log(myObject['123'], myObject['class']);
+console.log(myObject.class);
+
+
+var foo = {bar: 'bar'};
+delete foo.bar;
+console.log(foo);
+
+
+</script>
+</html>
