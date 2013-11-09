@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+//ビルトインStringコンストラクタ関数にargumentedPropertiesプロパティを追加
+String.argumentedProperties = [];
+
+if(!String.prototype.trimIt) { //prototypeにtrimItプロパティがない場合に追加
+	String.prototype.trimIt = function() {
+		return this.replace(/^\s+|\s+$/g, ''); //文字列前後のスペースを削除
+	}
+	//trimIt文字列をaugmentedProperties配列に追加
+	String.argumentedProperties.push('trimIt');
+}
+
+//文字列インスタンスのtrimIt()メソッドを追加
+var myString = '   trim me      ';
+console.log(myString);
+console.log(myString.trimIt());
+
+console.log(String.argumentedProperties.join());
+
+
+var foo = {};
+console.log(foo.constructor);
+
+
+var CustomConstructor = function CustomConstructor() {
+	return 'Wow!';
+}
+var instanceOfCustomObject = new CustomConstructor();
+
+console.log(instanceOfCustomObject);
+
+
+
+</script>
+</html>
