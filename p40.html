@@ -25,5 +25,23 @@ delete foo.bar;
 console.log(foo);
 
 
+var myArray = [];
+console.log(myArray.foo);
+/*
+JSはmyArray.fooが存在しないことを確認後、次にArray.prototype.fooを探す。
+しかし、このプロパティも存在しないため、次にObject.prototype.fooを探す。
+これも存在しないためundefinedを返す。
+*/
+
+var myArray = ['foo', 'bar'];
+console.log(myArray.hasOwnProperty('join'));
+
+/*
+そのオブジェクト→そのオブジェクトを生成したコンストラクタ関数→Object
+*/
+console.log(myArray.toLocaleString());
+
+
+
 </script>
 </html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+var myObject = {foo: 'value'};
+console.log('toString' in myObject);
+
+
+var cody = {
+	age: 33,
+	gender: 'male'
+};
+
+for (var key in cody) { // keyはループ内でそれぞれのプロパティ名を格納する変数
+	if(cody.hasOwnProperty(key)) {
+		console.log(key);
+	}
+}
+
+for (x in window.document) {
+	console.log(x);
+}
+
+
+</script>
+</html>
