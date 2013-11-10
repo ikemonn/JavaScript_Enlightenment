@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+//関数は変数、配列、オブジェクトに確認できる
+var funcA = function() {};
+var funcB = [function() {}];
+var funcC = {method: function() {}};
+
+//関数は引数として関数に渡したり、戻り値にすることができる
+var funcD = function(func) {
+	return func;
+}
+
+var runFancPassedToFuncD = funcD(function() {
+	console.log('Hi! funcD');
+});
+
+runFancPassedToFuncD();
+
+//関数はオブジェクト。つまりプロパティをもてる
+var funcE = function() {};
+funcE.answer = 'yup';
+console.log(funcE.answer);
+
+
+</script>
+</html>

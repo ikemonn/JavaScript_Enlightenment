@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+var myFunction = function(foo) {
+	arguments[0] = 'xyz';
+	console.log(foo, arguments[0]);
+	foo = 'foo';
+	console.log(foo, arguments[0]);
+
+	var arg1 = arguments[1]; // この例では渡されない引数
+	arguments[1] = '123';
+	console.log(arg1, arguments[1]);
+
+
+};
+myFunction('abc');
+
+
+
+</script>
+</html>

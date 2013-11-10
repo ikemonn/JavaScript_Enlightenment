@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+var myObject1 = {
+	name: 'myObject1',
+	mymethod: function() {console.log(this.name); }
+};
+
+myObject1.mymethod();
+
+var myObject2 = function() {console.log(this); };
+myObject2();
+
+var add = function() {
+	return arguments[0] + arguments[1];
+}
+
+console.log(add(4, 4));
+
+var foo = function foo() {
+	console.log(arguments.callee); //出力：この関数の内容
+	// arguments.callee() で foo()を再帰的に呼び出せる
+}();
+
+var myFunction = function (a, b, c) {
+	//return myFunction.length;
+	return arguments.length;
+};
+console.log(myFunction());
+
+
+
+</script>
+</html>

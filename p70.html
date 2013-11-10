@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+//関数の宣言方法
+//この方法は実際使われることはない
+var addConstructer = new Function ('x', 'y', 'return x+y');
+
+//関数宣言
+function AddStatment(x, y) {
+	return x+y;
+};
+
+//関数式
+var addExpression = function(x, y) {
+	return x+y;
+};
+
+//関数式(関数名指定：関数内で関数自身を指定する場合に使用)
+var addNameExpression = function addNameExpression(x, y) {
+	return x+y;
+};
+
+var myObject = {
+	myFunction: function() {return 'foo' ;}
+};
+console.log(myObject.myFunction());
+
+
+</script>
+</html>
