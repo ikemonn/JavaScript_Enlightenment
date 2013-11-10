@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+var cody = {};
+
+for (key in cody) {
+	if(cody.hasOwnProperty(key)) { //codyオブジェクトが空であることを確認する
+		console.log(key);
+	}
+}
+
+var cody1 = new Object();
+var cody2 = new Object(undefined);
+var cody3 = new Object(null);
+var cody4 = new Object('hoge');
+var cody5 = new Object(3);
+console.log(cody1.constructor,cody2,cody3,cody4,cody5);
+
+
+</script>
+</html>
