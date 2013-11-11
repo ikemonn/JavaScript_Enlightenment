@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+var speak = function() {
+	sayYo(); //sayYo();はここでは定義されていないが呼び出すことはできる
+	function sayYo() {console.log('Yo');}
+}(); //即時実行
+
+console.log(sum(2,2));
+function sum(x, y) { return x+y};
+
+
+
+
+</script>
+</html>

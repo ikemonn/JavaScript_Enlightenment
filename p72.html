@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+//無名関数を実行するための関数
+var sayHi = function(f) {
+	f(); //引数として渡された関数を実行。引数は関数である必要がある
+}
+
+//関数に別の無名関数を引数として渡して実行
+sayHi(function() { console.log('HI!!')});
+
+var sayWord = function() {console.log('yeah!!!!');}();
+
+//一番良く使われる方法
+(function(msg) {
+	console.log(msg);
+})('hige');
+
+//上記とは異なるが同じ結果を得られる
+(function(msg) {
+	console.log(msg);
+}('higeo'));
+
+//コードを一番短く出来る方法!
++function sayHi (msg) {console.log(msg);}('hk');
+
+//これは動作しない
+
+
+</script>
+</html>

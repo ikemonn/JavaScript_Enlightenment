@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+//関数は関数に渡されて、返されることができる
+var foo = function(f) {
+	return f;
+}
+var bar = foo(function() {console.log('hi')}); // fooの引数として無名関数を私、戻り値を格納
+bar();
+
+</script>
+</html>
